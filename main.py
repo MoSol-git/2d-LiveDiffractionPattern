@@ -44,6 +44,8 @@ def update():
     fshift = np.fft.fftshift(f)
     magnitude_spectrum = np.log(np.abs(fshift))
     ms = magnitude_spectrum
+
+    #adjust the levels according to your condition
     imv2.setImage(ms, levels=[9,12])
 
     cmap = pg.colormap.get('CET-L7')
